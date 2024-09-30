@@ -1,18 +1,33 @@
-# Django-loginForm
-Install dependencies
-uv pip install -r requirements.txt
 
-# in development mode
-uv pip install -r requirements-dev.txt
-Configure the settings (connection to the database, connection to an SMTP server, and other options)
-Edit source/app/conf/development/settings.py if you want to develop the project.
+# SIMPLE LOGIN-LOGOUT FORM
+in this project I created a simple form using Django's default setting 
+I used {{form.as_p}} tag that Django automatically creat a form that you can login and logout by creating super user in your terminal and this will provide both admin page and 
+this simple form
 
-Edit source/app/conf/production/settings.py if you want to run the project in production.
 
-Apply migrations
-python source/manage.py migrate
-Running
-On development server
-Start the local web server:
 
-python source/manage.py runserver
+## Installation
+activate your virtual environment
+
+```bash
+  py -3 -m venv .venv
+.venv\scripts\activate
+
+```
+then install the requirements
+
+```bash
+  pip install -r requirements.txt
+```
+
+inside the project folder open your terminal  and create a superuser
+```bash
+  python manage.py createsuperuser
+```
+
+again inside your terminal run the server and enjoy
+
+```bash
+  python manage.py runserver
+```
+
